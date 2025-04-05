@@ -1,0 +1,283 @@
+/* Register page specific styles */
+
+/* Adjust main container spacing */
+.main-container {
+    margin-top: 0;
+    padding-top: 10px;
+}
+
+.welcome-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.login-subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #666;
+    font-size: 16px;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.register-form-container {
+    max-width: 450px;
+    width: 100%;
+    margin-bottom: 80px; /* Add bottom margin to prevent footer collision */
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#register-form {
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.form-row .form-group {
+    width: calc(50% - 8px);
+    margin-bottom: 20px;
+}
+
+.terms-checkbox {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.terms-checkbox input {
+    margin-top: 5px;
+    margin-right: 10px;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.terms-checkbox label {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 0;
+}
+
+.terms-checkbox a {
+    color: #d3a863;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.terms-checkbox a:hover {
+    color: #c69c55;
+    text-decoration: underline;
+}
+
+/* Password strength indicator */
+.password-strength {
+    height: 4px;
+    margin-top: 5px;
+    width: 100%;
+    background: #e1e1e1;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.password-strength::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background-color: #ff5a5a;
+    transition: width 0.3s ease;
+}
+
+.password-strength.weak::before {
+    width: 33.33%;
+    background-color: #ff5a5a;
+}
+
+.password-strength.medium::before {
+    width: 66.66%;
+    background-color: #ffbd4a;
+}
+
+.password-strength.strong::before {
+    width: 100%;
+    background-color: #7cc576;
+}
+
+.password-requirements {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #888;
+}
+
+/* Enhancements for the submit button */
+.create-account-btn {
+    background-color: #d3a863;
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    width: 100%;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+.create-account-btn:hover {
+    background-color: #c69c55;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(211, 168, 99, 0.2);
+}
+
+.create-account-btn:active {
+    transform: translateY(0);
+}
+
+/* Fix for email input and other form inputs */
+.form-group input[type="email"],
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.form-group input[type="email"]:focus,
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus {
+    border-color: #d3a863;
+    box-shadow: 0 0 0 2px rgba(211, 168, 99, 0.2);
+    outline: none;
+}
+
+/* Email field specific fix */
+#email {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+}
+
+/* OR divider styles */
+.or-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.or-divider::before,
+.or-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.or-divider span {
+    padding: 0 15px;
+    color: #999;
+    font-size: 14px;
+}
+
+/* Social Login Buttons */
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.google-btn, .facebook-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #e1e1e1;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.google-btn:hover, .facebook-btn:hover {
+    background-color: #f5f5f5;
+}
+
+.google-btn i, .facebook-btn i {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.google-btn i {
+    color: #DB4437;
+}
+
+.facebook-btn i {
+    color: #4267B2;
+}
+
+/* Register link */
+.register-link {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.register-link a {
+    color: #d3a863;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Ensure the footer stays at the bottom */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    flex: 1;
+    padding-bottom: 30px;
+}
+
+.footer {
+    margin-top: auto;
+}

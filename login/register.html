@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | DinEase</title>
+    <link rel="stylesheet" href="login-style.css">
+    <link rel="stylesheet" href="register-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">DinEase</div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="login.html">Sign In</a>
+            <a href="register.html">Register</a>
+        </div>
+    </div>
+    
+    <div class="content-wrapper">
+    <div class="main-container">
+
+        <div class="image-container">
+            <div class="image-overlay">
+                <div class="image-content">
+                    <h1>Join Our Culinary Community</h1>
+                    <p>Create an account to make reservations, receive exclusive offers, and enjoy a personalized experience with DinEase.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-container">
+            <div class="login-container register-form-container">
+                <h1 class="welcome-heading">Welcome</h1>
+                <p class="login-subtitle">Sign up to access your account and manage your reservations</p>
+                
+                <form id="register-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstname">First Name</label>
+                            <input type="text" id="firstname" name="firstname" placeholder="Your first name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname">Last Name</label>
+                            <input type="text" id="lastname" name="lastname" placeholder="Your last name" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Your email address" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Choose a username" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Create a secure password" required>
+                        <div class="password-strength" id="password-strength"></div>
+                        <p class="password-requirements">Password must be at least 8 characters with letters, numbers, and special characters.</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                    </div>
+                    
+                    <div class="terms-checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="create-account-btn">Sign Up</button>
+                    </div>
+                    <p class="register-link">Already have an account? <a href="login.html">Sign in instead</a></p>
+                    
+                    <div class="or-divider">
+                        <span>OR</span>
+                    </div>
+                    
+                    <div class="social-login">
+                        <button type="button" class="google-btn">
+                            <i class="fab fa-google"></i> Sign up with Google
+                        </button>
+                        <button type="button" class="facebook-btn">
+                            <i class="fab fa-facebook-f"></i> Sign up with Facebook
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <div class="footer">
+        <div class="footer-content">
+            <p>Contact: info@savorbistro.com</p>
+            <div class="social-footer">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 DinEase. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="register.js"></script>
+</body>
+</html>
