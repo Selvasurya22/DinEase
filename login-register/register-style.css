@@ -1,23 +1,36 @@
 /* Register page specific styles */
 
+/* Custom form positioning */
+.form-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Adjust main container spacing */
 .main-container {
     margin-top: 0;
-    padding-top: 10px;
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+    min-height: calc(100vh - 150px);
+    background-color: #f8f9fa;
 }
 
 .welcome-heading {
     font-family: 'Cormorant Garamond', serif;
     font-size: 42px;
     color: #333;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    margin-top: 0;
     font-weight: 600;
     text-align: center;
 }
 
 .login-subtitle {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: #666;
     font-size: 16px;
     max-width: 350px;
@@ -27,30 +40,33 @@
 }
 
 .register-form-container {
-    max-width: 450px;
-    width: 100%;
-    margin-bottom: 80px; /* Add bottom margin to prevent footer collision */
+    max-width: 420px;
+    width: 120%;
+    margin: 40px auto;
     padding: 40px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    position: relative;
+    max-height: 600px;
+    overflow-y: auto;
 }
 
 #register-form {
     width: 100%;
-}
-
-.form-row {
     display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    margin-bottom: 0;
-    width: 100%;
+    flex-direction: column;
+    margin-top: 15px;
+    padding: 0;
 }
 
-.form-row .form-group {
-    width: calc(50% - 8px);
+.form-group {
+    width: 100%;
     margin-bottom: 20px;
+    position: relative;
 }
 
 .terms-checkbox {
@@ -134,9 +150,9 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
-    margin-top: 20px;
+    margin-top: 15px;
     transition: all 0.3s ease;
     width: 100%;
     letter-spacing: 0.5px;
@@ -156,6 +172,16 @@
     transform: translateY(0);
 }
 
+/* Form label styling */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #333;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
 /* Fix for email input and other form inputs */
 .form-group input[type="email"],
 .form-group input[type="text"],
@@ -168,6 +194,7 @@
     color: #333;
     background-color: #f8f9fa;
     transition: all 0.3s ease;
+    margin-top: 5px;
 }
 
 .form-group input[type="email"]:focus,
@@ -280,4 +307,23 @@ body {
 
 .footer {
     margin-top: auto;
+}
+
+/* Scrollbar styling */
+.register-form-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.register-form-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.register-form-container::-webkit-scrollbar-thumb {
+    background: #d3a863;
+    border-radius: 10px;
+}
+
+.register-form-container::-webkit-scrollbar-thumb:hover {
+    background: #c69c55;
 }
